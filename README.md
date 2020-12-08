@@ -1,41 +1,31 @@
-# NodeGui plugin animation
+# NodeGui plugin Text to Speech
 
 [![npm version](https://img.shields.io/npm/v/@nodegui/plugin-animation.svg)](https://www.npmjs.com/package/@nodegui/plugin-animation)
 
-Plugin you can use to create native animations in NodeGui
+Plugin you can use qt text to speech
 
 ## Requirements
 
-Requires NodeGui v0.19.0 and up
+Requires NodeGui v0.20.0 and up
 
 ## Installation
 
 ```
-    npm install @nodegui/plugin-animation
+    npm install 
 ```
 
 ## Demo
 
 ```js
-import { QPropertyAnimation } from '@nodegui/plugin-animation';
-import { QPushButton } from '@nodegui/nodegui';
+import { QTextToSpeech } from "./lib/QTextToSpeech";
 
-const animation = new QPropertyAnimation();
+const tts = new QTextToSpeech();
 
-const button = new QPushButton();
-button.setText('Animated Button');
-button.show();
+tts.addEventListener('stateChanged', (n: State) => {
+    const stringState = n === State.Speaking ? 'Speaking' : n === State.Paused ? 'Paused' : 'Read';
+    console.log('(EVENT) TTS state is ' + stringState);
+});
 
-animation.setPropertyName('windowOpacity');
-animation.setTargetObject(button);
+ tts.say("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum");
 
-animation.setDuration(5000);
-animation.setStartValue(0.4);
-animation.setKeyValueAt(0.5, 1.0);
-animation.setEndValue(0.4);
-
-animation.start();
-
-(global as any).button = button;
-(global as any).animation = animation;
 ```
