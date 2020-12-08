@@ -1,0 +1,48 @@
+{
+    "name": "qtexttospeech",
+    "version": "1.0.0",
+    "description": "A implementation of qtext to speech for NodeGui",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc && npm run build:addon",
+        "postinstall": "npm run build:addon",
+        "build:addon": "cross-env CMAKE_BUILD_PARALLEL_LEVEL=8 cmake-js compile",
+        "dev": "npm run build && qode dist/demo.js",
+        "test": "qode ./node_modules/.bin/jest",
+        "lint:cpp": "clang-format -i --glob=src/cpp/**/*.[h,c]*",
+        "lint:ts": "tsc --noEmit && eslint './src/**/*.{ts,tsx,js,jsx}' --fix"
+    },
+    "author": "Ran-j",
+    "license": "MIT",
+    "peerDependencies": {
+        "@nodegui/nodegui": ">=0.20.0"
+    },
+    "dependencies": {
+        "bluebird": "^3.7.2",
+        "cmake-js": "^6.1.0",
+        "cross-env": "^7.0.2",
+        "node-addon-api": "^3.0.0"
+    },
+    "devDependencies": {
+        "@nodegui/nodegui": "^0.21.0",
+        "@types/jest": "^25.2.3",
+        "@types/node": "^14.0.5",
+        "@typescript-eslint/eslint-plugin": "~3.0.0",
+        "@typescript-eslint/parser": "~3.0.0",
+        "clang-format": "~1.4.0",
+        "eslint": "~7.1.0",
+        "eslint-config-prettier": "~6.11.0",
+        "eslint-plugin-prettier": "~3.1.3",
+        "husky": "^4.2.5",
+        "jest": "~26.0.1",
+        "prettier": "^2.0.5",
+        "ts-jest": "~26.0.0",
+        "typescript": "~3.9.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "npm run lint:ts && npm run lint:cpp && npm run test"
+        }
+    }
+}
