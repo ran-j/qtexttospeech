@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@nodegui/plugin-animation.svg)](https://www.npmjs.com/package/@nodegui/plugin-animation)
 
-Plugin you can use qt text to speech
+Plugin you can use QT text to speech
 
 ## Requirements
 
@@ -12,6 +12,13 @@ Requires NodeGui v0.20.0 and up
 
 ```
     npm install 
+```
+
+## Build from source
+
+```
+    npm install 
+    npm run build
 ```
 
 ## Demo

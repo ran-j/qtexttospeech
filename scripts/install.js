@@ -30,11 +30,7 @@ function getMiniQtTextToSpeechArtifacts() {
             name: 'Qt TextToSpeech',
             link: `https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/qt5_5141/qt.qt5.5141.clang_64/5.14.1-0-202001241000qtspeech-MacOS-MacOS_10_13-Clang-MacOS-MacOS_10_13-X86_64.7z`,
             skipSetup: checkIfExists(
-              path.resolve(qtHome, 
-                'lib',
-                "cmake",
-                'Qt5TextToSpeech',
-                'Qt5TextToSpeechConfig.cmake'
+              path.resolve(qtHome, 'lib', 'QtTextToSpeech.framework', 'QtTextToSpeech'
               )
             ),
           }
@@ -47,12 +43,7 @@ function getMiniQtTextToSpeechArtifacts() {
           {
             name: 'Qt TextToSpeech',
             link: `https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt5_5141/qt.qt5.5141.win64_msvc2017_64/5.14.1-0-202001240957qtspeech-Windows-Windows_10-MSVC2017-Windows-Windows_10-X86_64.7z`,
-            skipSetup: checkIfExists(path.resolve(qtHome, 
-              'lib',
-              "cmake",
-              'Qt5TextToSpeech',
-              'Qt5TextToSpeechConfig.cmake'
-            ))
+            skipSetup: checkIfExists(path.resolve(qtHome, 'bin', 'Qt5TextToSpeech.dll' ))
           }
         ]
       };
