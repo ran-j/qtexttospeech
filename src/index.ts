@@ -1,1 +1,1 @@
-export { QTextToSpeech, State } from "./lib/QTextToSpeech";
+export { QTextToSpeech, State } from './lib/QTextToSpeech';

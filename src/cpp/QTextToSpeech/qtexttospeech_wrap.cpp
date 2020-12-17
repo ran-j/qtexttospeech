@@ -1,9 +1,9 @@
 #include "qtexttospeech_wrap.h"
 
-#include <QWidget>
-
-#include <nodegui/QtWidgets/QWidget/qwidget_wrap.h>
 #include <nodegui/Extras/Utils/nutils.h>
+#include <nodegui/QtWidgets/QWidget/qwidget_wrap.h>
+
+#include <QWidget>
 
 Napi::FunctionReference QTextToSpeechtWrap::constructor;
 

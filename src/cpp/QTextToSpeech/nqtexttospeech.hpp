@@ -1,13 +1,13 @@
 #pragma once
 
+#include <napi.h>
+#include <nodegui/Extras/Export/export.h>
+#include <nodegui/QtCore/QObject/qobject_macro.h>
+#include <nodegui/core/NodeWidget/nodewidget.h>
+
 #include <QApplication>
 #include <QTextToSpeech>
 #include <QVoice>
-
-#include <nodegui/Extras/Export/export.h>
-#include <nodegui/core/NodeWidget/nodewidget.h>
-#include <nodegui/QtCore/QObject/qobject_macro.h>
-#include <napi.h>
 
 class DLL_EXPORT NQtexttospeech : public QTextToSpeech, public EventWidget {
   Q_OBJECT

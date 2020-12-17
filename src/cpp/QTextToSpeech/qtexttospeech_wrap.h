@@ -1,11 +1,11 @@
 #pragma once
 
 #include <napi.h>
+#include <nodegui/Extras/Export/export.h>
+#include <nodegui/QtCore/QObject/qobject_macro.h>
 
 #include <QPointer>
 
-#include <nodegui/Extras/Export/export.h>
-#include <nodegui/QtCore/QObject/qobject_macro.h>
 #include "nqtexttospeech.hpp"
 
 class DLL_EXPORT QTextToSpeechtWrap

@@ -1,5 +1,3 @@
-
-//@ts-ignore
-import addon from "../../../build/Release/nodegui_plugin_text_to_speech.node";
+const addon = require('../../../build/Release/nodegui_plugin_text_to_speech.node');
 
 export default addon;
