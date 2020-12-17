@@ -1,4 +1,4 @@
-import { QTextToSpeech } from "./lib/QTextToSpeech";
+import { QTextToSpeech, State } from "./lib/QTextToSpeech";
 
 const tts = new QTextToSpeech();
 

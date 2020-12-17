@@ -1,9 +1,7 @@
 #include <napi.h>
-
-#include "src/cpp/QTextToSpeech/qtexttospeech_wrap.h"
+#include <QTextToSpeech>
 
 Napi::Object Main(Napi::Env env, Napi::Object exports) {
-  QTextToSpeechtWrap::init(env, exports);
   return exports;
 }
 

@@ -1,5 +1,5 @@
 import { NativeElement, NodeWidget, checkIfNativeElement, NodeObject, QObjectSignals } from '@nodegui/nodegui';
-import addon from '../utils/addon';
+import addon from './utils/addon';
 
 /**
  
