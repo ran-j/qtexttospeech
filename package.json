@@ -24,7 +24,6 @@
     "node-addon-api": "^3.0.0"
   },
   "devDependencies": {
-    "@nodegui/nodegui": "^0.40.1",
     "@types/jest": "^25.2.3",
     "@types/node": "^16.4.13",
     "@typescript-eslint/eslint-plugin": "~3.0.0",
